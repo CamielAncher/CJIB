@@ -13,7 +13,7 @@ computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredenti
 
 
 # Analyze image with OCR
-def extract_text_from_image(image_path):
+def extract_text_from_image(image_path): r"C:\Users\camie\OneDrive\school\hanze\FraudDetectionCjib\2048x1152.jpg"
     """
     Extracts text from an image using Azure Computer Vision OCR.
     """
@@ -46,4 +46,6 @@ if __name__ == "__main__":
         print("Detected text:")
         print("\n".join(detected_text))
     else:
-        print("Image file not found.")
+        print("Image file not found because i dont like you(remeber to change this).")
+
+#testing to see changes
