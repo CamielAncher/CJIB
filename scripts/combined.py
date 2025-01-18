@@ -20,6 +20,7 @@ def list_blob_urls(max_pictures=10):
 
     # Counter for processed blobs
     count = 0
+    fraudCount = 0
 
     for blob in blob_list:
         if count >= max_pictures:
@@ -49,8 +50,12 @@ def list_blob_urls(max_pictures=10):
                     for line in page.lines:
                         detected_text += line.text + " "
 
+            # Check if "NL" is present in the detected text
             if "NL" not in detected_text.strip():
-                print("doesn't look like a Dutch number plate")
+                print("further inspection needed")
+                with open(r"C:\Users\camie\OneDrive\school\hanze\FraudDetectionCjib\docs\Further inspection.txt", "a") as file:
+                    file.write(f"{blob_url}\n")
+                fraudCount += 1
             
             else:
                 print(f"detected: {detected_text.strip()}")
@@ -64,6 +69,7 @@ def list_blob_urls(max_pictures=10):
         count += 1
 
     print(f"Processed {count} blob(s).")
+    print(f"Number of possible fraudulent activities detected: {fraudCount}")
 
 if __name__ == "__main__":
     # Set the number of blobs to process
