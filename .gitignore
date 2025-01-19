@@ -1,13 +1,11 @@
-# Ignore the virtual environment folder
-venv/
-
-# Ignore the generated plates folder
-generated_plates/
-
-# Ignore the formatted CSV file
-Formatted_kentekens.csv
-
-# Ignore everything inside the Output folder
+# Ignore all contents of the Output folder
 Output/*
 
+# Allow the Output folder itself
+!Output/
 
+# Ignore everything inside Output, including nested folders
+Output/**
+
+# Explicitly allow Output/.gitignore
+!Output/.gitignore
