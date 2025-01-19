@@ -1,2 +1,5 @@
 "venv/" 
-"generated_plates/"
+"generated_plates/""
+"Formatted_kentekens.csv/"
+Output/*
+!Output/.gitignore
