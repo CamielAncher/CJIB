@@ -1,5 +1,14 @@
-"venv/" 
-"generated_plates/""
-"Formatted_kentekens.csv/"
+# Ignore the virtual environment folder
+venv/
+
+# Ignore the generated plates folder
+generated_plates/
+
+# Ignore the formatted CSV file
+Formatted_kentekens.csv
+
+# Ignore everything inside the Output folder
 Output/*
+
+# But do not ignore the .gitignore file inside Output
 !Output/.gitignore
