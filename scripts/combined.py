@@ -13,7 +13,7 @@ blob_service_client = BlobServiceClient(account_url=STORAGE_ACCOUNT_URL)
 container_client = blob_service_client.get_container_client(CONTAINER_NAME)
 computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))
 
-def list_blob_urls(max_pictures=4):
+def list_blob_urls(max_pictures=200):
     """List a limited number of blob URLs in a public container and analyze them with Azure Vision API."""
     print(f"Processing up to {max_pictures} blob(s) in public container '{CONTAINER_NAME}':")
     blob_list = container_client.list_blobs()
@@ -53,7 +53,7 @@ def list_blob_urls(max_pictures=4):
             # Check if "NL" is present in the detected text
             if "NL" not in detected_text.strip():
                 print("further inspection needed")
-                with open(r"C:\Users\camie\OneDrive\school\hanze\FraudDetectionCjib\docs\Further inspection.txt", "a") as file:
+                with open(r"C:\Users\camie\OneDrive\school\hanze\FraudDetectionCjib\Output\Further inspection.txt", "a") as file:
                     file.write(f"{blob_url}\n")
                 fraudCount += 1
             
@@ -73,4 +73,4 @@ def list_blob_urls(max_pictures=4):
 
 if __name__ == "__main__":
     # Set the number of blobs to process
-    list_blob_urls(max_pictures=4)  # Change this value as needed
+    list_blob_urls(max_pictures=200)  # Change this value as needed
