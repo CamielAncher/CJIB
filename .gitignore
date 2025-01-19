@@ -1,3 +1,6 @@
+#ignore venv
+venv/
+
 # Ignore all contents of the Output folder
 Output/*
 
