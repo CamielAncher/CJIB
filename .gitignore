@@ -10,5 +10,4 @@ Formatted_kentekens.csv
 # Ignore everything inside the Output folder
 Output/*
 
-# But do not ignore the .gitignore file inside Output
-!Output/.gitignore
+
