@@ -1,0 +1,14 @@
+#ignore venv
+venv/
+
+# Ignore all contents of the Output folder
+Output/*
+
+# Allow the Output folder itself
+!Output/
+
+# Ignore everything inside Output, including nested folders
+Output/**
+
+# Explicitly allow Output/.gitignore
+!Output/.gitignore
