@@ -21,7 +21,7 @@ This serves as the foundation for exploring fraud detection techniques using clo
 
 ### Current Capabilities
 - **Missing "NL" Detection:** Automatically flags plates without the "NL" identifier.
-- **Batch Processing:** Analyze up to 200 license plate images in a single run.
+- **Batch Processing:** Analyze up to as many license plate images in a single run as you want to pay for.
 - **Custom Plate Generation:** Simulate license plate images with anomalies for testing.
 - **Simple Reporting:** Flagged anomalies are logged for further inspection.
 - **Azure Integration:** Seamless integration with Azure Blob Storage and Computer Vision API.
@@ -39,7 +39,7 @@ This serves as the foundation for exploring fraud detection techniques using clo
 ### Prerequisites
 Before running the project, ensure you have:
 
-1. **Python 3.8 or higher** installed.
+1. **Python 3.13 or higher** installed.
 2. An Azure account with:
    - **Blob Storage** set up for storing license plate images.
    - **Computer Vision API** enabled for text extraction.
