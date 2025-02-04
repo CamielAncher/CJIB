@@ -4,10 +4,10 @@ import random
 import csv
 
 # Paths and directories
-TEMPLATE_PATH = r"C:\Users\camie\Documents\lege kentekenplaat.webp"  # Path to your blank plate image
-OUTPUT_DIR = r"C:\Users\camie\OneDrive\school\hanze\FraudDetectionCjib\Output\generated plates"
+TEMPLATE_PATH = r""  # Path to your blank plate image
+OUTPUT_DIR = r""
 FONT_PATH = "arial.ttf"  # Path to your font file
-CSV_FILE_PATH = r"C:\Users\camie\OneDrive\school\hanze\FraudDetectionCjib\Output\formatted_kentekens.csv"  # Path to the CSV file containing plates
+CSV_FILE_PATH = r""  # Path to the CSV file containing plates
 
 # Ensure the output directory exists
 if not os.path.exists(OUTPUT_DIR):

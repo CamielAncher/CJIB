@@ -1,8 +1,8 @@
 from azure.storage.blob import BlobServiceClient
 
 # Public Blob Storage account URL (only the account URL, without the container name)
-STORAGE_ACCOUNT_URL = "https://cjib.blob.core.windows.net"
-CONTAINER_NAME = "number-plate-pictures"
+STORAGE_ACCOUNT_URL = ""
+CONTAINER_NAME = ""
 
 # Initialize Blob Service Client for a public container (no credentials needed)
 blob_service_client = BlobServiceClient(account_url=STORAGE_ACCOUNT_URL)

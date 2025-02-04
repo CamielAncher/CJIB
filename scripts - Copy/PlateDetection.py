@@ -2,14 +2,14 @@ from azure.cognitiveservices.vision.computervision import ComputerVisionClient
 from msrest.authentication import CognitiveServicesCredentials
 
 # Azure subscription details
-subscription_key = "AkI53NcuEfojIqy7nIyHVQZSsCS0WkamgX13k27PRtq2mKNdYWv7JQQJ99ALACYeBjFXJ3w3AAAAACOGFj1E"
-endpoint = "https://visionbot1.cognitiveservices.azure.com/"
+subscription_key = ""
+endpoint = ""
 
 # Authenticate client
 computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))
 
 # Image path
-image_path = r"C:\Users\Camie\OneDrive\Pictures\hanze\2048x1152.jpg"
+image_path = r""
 
 # Send the image to Azure and print the OCR response
 try:

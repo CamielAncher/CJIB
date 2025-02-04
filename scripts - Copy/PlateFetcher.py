@@ -3,7 +3,7 @@ import requests
 import random
 
 # Paths
-OUTPUT_CSV_PATH = r"C:\Users\camie\OneDrive\school\hanze\FraudDetectionCjib\Output\formatted_kentekens.csv"  # Path to save the CSV
+OUTPUT_CSV_PATH = r""  # Path to save the CSV
 API_URL = "https://opendata.rdw.nl/resource/m9d7-ebf2.json"
 BATCH_SIZE = 30  # Number of plates per batch
 TOTAL_PLATES = 60000  # Total number of plates to generate

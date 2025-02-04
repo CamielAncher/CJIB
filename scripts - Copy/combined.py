@@ -3,17 +3,17 @@ from msrest.authentication import CognitiveServicesCredentials
 from azure.storage.blob import BlobServiceClient
 
 # Azure details
-STORAGE_ACCOUNT_URL = "https://cjib.blob.core.windows.net"
-CONTAINER_NAME = "number-plate-pictures"
-subscription_key = "AkI53NcuEfojIqy7nIyHVQZSsCS0WkamgX13k27PRtq2mKNdYWv7JQQJ99ALACYeBjFXJ3w3AAAAACOGFj1E"
-endpoint = "https://visionbot1.cognitiveservices.azure.com/"
+STORAGE_ACCOUNT_URL = "" #use own storage account for demonstrating already uploaded pictures are in the container.
+CONTAINER_NAME = ""
+subscription_key = #use own subscription key.
+endpoint = #use own subscription and endpoint.
 
 # Initialize
 blob_service_client = BlobServiceClient(account_url=STORAGE_ACCOUNT_URL)
 container_client = blob_service_client.get_container_client(CONTAINER_NAME)
 computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))
 
-def list_blob_urls(max_pictures=200):
+def list_blob_urls(max_pictures=30):
     """List a limited number of blob URLs in a public container and analyze them with Azure Vision API."""
     print(f"Processing up to {max_pictures} blob(s) in public container '{CONTAINER_NAME}':")
     blob_list = container_client.list_blobs()
@@ -53,7 +53,7 @@ def list_blob_urls(max_pictures=200):
             # Check if "NL" is present in the detected text
             if "NL" not in detected_text.strip():
                 print("further inspection needed")
-                with open(r"C:\Users\camie\OneDrive\school\hanze\FraudDetectionCjib\Output\Further inspection.txt", "a") as file:
+                with open(r"path_to_wanted_file", "a") as file:
                     file.write(f"{blob_url}\n")
                 fraudCount += 1
             
@@ -73,4 +73,4 @@ def list_blob_urls(max_pictures=200):
 
 if __name__ == "__main__":
     # Set the number of blobs to process
-    list_blob_urls(max_pictures=200)  # Change this value as needed
+    list_blob_urls(max_pictures=30)  # Change this value as needed
