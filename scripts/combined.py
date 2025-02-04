@@ -3,7 +3,7 @@ from msrest.authentication import CognitiveServicesCredentials
 from azure.storage.blob import BlobServiceClient
 
 # Azure details
-STORAGE_ACCOUNT_URL = "" #use own storage account for demonstrating already uploaded pictures are in the container.
+STORAGE_ACCOUNT_URL = "" #use own storage account.
 CONTAINER_NAME = ""
 subscription_key = #use own subscription key.
 endpoint = #use own subscription and endpoint.
